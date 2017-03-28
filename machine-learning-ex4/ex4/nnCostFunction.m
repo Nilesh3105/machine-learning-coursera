@@ -87,8 +87,8 @@ Theta1_grad = Delta1 / m;
 Theta2_grad = Delta2 / m;
 
 
-
-
+Theta1_grad += [zeros(hidden_layer_size,1) (lambda * Theta1(:,2:end) / m)];
+Theta2_grad += [zeros(num_labels,1) (lambda * Theta2(:,2:end) / m)];
 
 
 
