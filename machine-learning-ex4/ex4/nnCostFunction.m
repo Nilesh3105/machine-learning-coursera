@@ -71,6 +71,8 @@ for t = 1:m
 	J += -Yt*log(a3) - (1-Yt) * log(1-a3);
 end
 J /= m;
+temp = [Theta1(:,2:end)(:); Theta2(:,2:end)(:);];
+J += lambda * (temp' * temp) / (2*m);
 
 
 
